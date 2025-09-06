@@ -2,10 +2,10 @@ from flask import Flask, jsonify, request
 import joblib
 import pandas as pd
 
-from flask_cors import CORS   # <-- add this
+from flask_cors import CORS  
 
 app = Flask(__name__)
-CORS(app)  # <-- enable CORS so HTML form can call API
+CORS(app)
 
 # Load model and pipeline
 model = joblib.load("model.pkl")
